@@ -1,0 +1,109 @@
+:root {
+    --bright-orange : hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --vdark-cyan: hsl(179, 100%, 13%);
+    --transparent-white : hsla(0, 0%, 100%, 0.75);
+    --vlight-gray: hsl(0, 0%, 95%);
+    --heading-font: 'Big shoulders display', sans-serif;
+    --body-font: 'Lexend deca', sans-serif;
+    --spacing-sm: 24px;
+    --spacing-lg: 36px;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--vlight-gray);
+    font-size: 15px;
+    font-family: var(--body-font);
+    color: var(--transparent-white);
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--vlight-gray);
+    margin: var(--spacing-sm) 0;
+}
+
+.container {
+    max-width: 760px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: var(--spacing-lg);
+    width: calc(100%/3);
+    height: 100%;
+}
+
+.orange-card {
+    background-color: var(--bright-orange);
+}
+
+.blue-card {
+    background-color: var(--dark-cyan);
+}
+
+.green-card {
+    background-color: var(--vdark-cyan);
+}
+
+.card p {
+    line-height: var(--spacing-sm);
+}
+
+.card button {
+    margin: 72px 0 0 0;
+    padding: 14px 32px;
+    background-color: var(--vlight-gray);
+    border: none;
+    border-radius: 20px;
+    font-weight: 400;
+}
+
+.orange-card button {
+    color: var(--bright-orange);
+}
+
+.blue-card button {
+    color: var(--dark-cyan);
+}
+
+.green-card button {
+    color: var(--vdark-cyan);
+}
+
+.card button:hover {
+    color: var(--vlight-gray);
+    border: 2px solid var(--vlight-gray);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 630px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
